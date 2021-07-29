@@ -1,10 +1,25 @@
 # peapod
-Deployment repository for the Cat Pea music player.
+Installation/deployment repository for the Cat Pea music player.
 
-## Overview
-This setup has a very simple requirement ```git clone git@github.com:catpea/peapod.git; cd peapod; install.sh``` the install script will take it from there.
+## Installation
 
-## Preparations
+To install peapod, you should run the install script.
 
-- The device must be on the local network.
-- You will need passwordless login ssh-copy-id pi@venus
+To do that, login to your device ssh pi@venus and issue the following cURL or Wget command:
+
+```sh
+
+sudo sh -c 'curl -o- https://raw.githubusercontent.com/catpea/peapod/main/install.sh | bash'
+
+```
+
+```sh
+
+sudo sh -c 'wget -qO- https://raw.githubusercontent.com/catpea/peapod/main/install.sh | bash'
+
+```
+
+### Warning
+
+This script adds a new user to your system and alters system configuration. Run at your own risk.
+peapod comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.

@@ -9,8 +9,9 @@
     ./setup/daemon.sh;
   }
 
-  if -f .SETUP; then
+  if test -f .SETUP; then
     echo "ALREADY INSTALLED";
+    exit
   fi;
 
   setup;

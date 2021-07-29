@@ -10,7 +10,7 @@
   }
 
   if test -f .SETUP; then
-    echo "ALREADY INSTALLED";
+    echo "Already setup peapod"; # TODO: tun the update here.
     exit
   fi;
 

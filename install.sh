@@ -14,8 +14,7 @@
   }
 
   setup() {
-
-    sudo -u peapod sh -c "cd ~; git clone https://github.com/catpea/peapod.git;"
+    sudo -u peapod sh -c "cd ~; if test -d peapod; then cd peapod; git pull; else git clone https://github.com/catpea/peapod.git; fi;"
     sudo -u peapod sh -c "cd ~/peapod; ./setup.sh"
   }
 

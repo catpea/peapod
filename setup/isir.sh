@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
 echo isir setup...
+# sudo npm i -g isir

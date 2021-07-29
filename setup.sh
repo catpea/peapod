@@ -7,6 +7,7 @@
     ./setup/node.sh;
     ./setup/isir.sh;
     ./setup/daemon.sh;
+    #TODO: consider pm2 maybe?
   }
 
   if test -f .SETUP; then

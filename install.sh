@@ -4,12 +4,12 @@
 
   user() {
     if id peapod &>/dev/null; then
-      echo 'Already created peapea.'
+      echo 'Already created peapod.'
     else
       useradd --shell /bin/nologin --groups sudo,input --comment "Pea Pod" --create-home --home-dir /home/peapod peapod;
       echo 'peapod ALL=(ALL) NOPASSWD: ALL' | sudo tee /etc/sudoers.d/010_peapod-nopasswd
       #NOTE: this user cannot login by standard means, use sudo -u peapod -s
-      echo 'Created peapea'
+      echo 'Created peapod'
     fi
   }
 

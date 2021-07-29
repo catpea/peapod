@@ -22,4 +22,4 @@ sudo sh -c 'wget -qO- https://raw.githubusercontent.com/catpea/peapod/main/insta
 ### Warning
 
 This script adds a new user to your system and alters system configuration. Run at your own risk.
-peapod comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
+peapod comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable bleargh.

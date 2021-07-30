@@ -3,7 +3,7 @@
 set prompt "#"
 set address "11:22:34:3B:E7:3C"
 
-spawn sudo bluetoothctl -a
+spawn sudo bluetoothctl
 expect -re $prompt
 send "remove $address\r"
 sleep 1

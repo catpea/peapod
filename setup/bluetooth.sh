@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-echo bluetooth setup...
-
-if [ $(bluetoothctl paired-devices | grep 'Device 11:22:34:3B:E7:3C Beauty-R1') ]; then
-  echo "Already paired Beauty-R1 device"
+echo Bluetooth Remote Setup
+if bluetoothctl paired-devices | grep --quiet '11:22:34:3B:E7:3C'; then
+  echo "Already paired the Beauty-R1 device"
 else
-  echo run apt-get -y install expect
-  echo run ./setup/bluetooth.expect
+  if ! command -v expect &> /dev/null; then
+    run apt-get -y install expect
+  fi
+  ./setup/bluetooth.expect
 fi

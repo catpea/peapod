@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
-echo isir setup...
-# sudo npm i -g isir
+
+if command -v isir &> /dev/null; then
+  echo "Already installed isir";
+  exit;
+fi
+
+echo Installing isir
+npm i -g isir

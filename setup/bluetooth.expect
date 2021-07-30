@@ -15,8 +15,9 @@ send_user "\nDone sleeping\r"
 send "scan off\r"
 expect "Controller"
 send "trust $address\r"
-sleep 2
+sleep 1;
 send "pair $address\r"
+sleep 1
 send "connect $address\r"
 sleep 1
 send_user "\nShould be paired now.\r"

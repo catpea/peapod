@@ -3,12 +3,11 @@
 {
 
   setup() {
+    ./setup/music.sh;
     ./setup/bluetooth.sh;
     ./setup/node.sh;
     ./setup/isir.sh;
-    ./setup/daemon.sh;
-    ./setup/music.sh;
-    #TODO: consider pm2 maybe?
+    ./setup/daemon.sh; # powsibly consider pm2 if manual setup causes problems
   }
 
   if test -f .SETUP; then

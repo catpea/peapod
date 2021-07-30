@@ -7,4 +7,6 @@ rm -fr /srv/music
 gpasswd -d pi music
 groupdel music
 
+echo this program will not remove nodejs installation becasue it is useful
+
 # TODO remove service

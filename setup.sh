@@ -7,6 +7,7 @@
     ./setup/node.sh;
     ./setup/isir.sh;
     ./setup/daemon.sh;
+    ./setup/music.sh;
     #TODO: consider pm2 maybe?
   }
 

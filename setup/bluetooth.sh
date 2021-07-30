@@ -4,7 +4,7 @@ if bluetoothctl paired-devices | grep --quiet '11:22:34:3B:E7:3C'; then
 else
   echo Configuring bluetooth decice.
   if ! command -v expect &> /dev/null; then
-    run apt-get -y install expect
+    apt-get -y install expect
   fi
   ./setup/bluetooth.expect
 fi

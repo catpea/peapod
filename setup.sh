@@ -3,11 +3,11 @@
 {
 
   setup() {
-    ./setup/music.sh;
-    ./setup/bluetooth.sh;
     ./setup/node.sh;
+    ./setup/music.sh;
     ./setup/isir.sh;
-    ./setup/daemon.sh; # powsibly consider pm2 if manual setup causes problems
+    ./setup/bluetooth.sh; # must be setup after isir as it uses isir to applu custom configuration things
+    ./setup/daemon.sh; # fina step (note: possibly consider pm2 if manual setup causes problems)
   }
 
   if test -f .SETUP; then

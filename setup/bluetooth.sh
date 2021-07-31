@@ -1,20 +1,7 @@
 #!/usr/bin/env bash
-if bluetoothctl paired-devices | grep --quiet '11:22:34:3B:E7:3C'; then
-  echo "Already paired the Beauty-R1 device"
-else
-  echo Configuring bluetooth decice.
-  if ! command -v expect &> /dev/null; then
-    apt-get -y install expect
-  fi
-  ./setup/bluetooth.expect
-fi
 
-# Beauty-R1 NOTES
-# After scan on you need these:
-# #bluetoothctl trust 11:22:34:3B:E7:3C;
-# #bluetoothctl pair 11:22:34:3B:E7:3C;
-# #bluetoothctl connect 11:22:34:3B:E7:3C;
-#
-# But! you must wait for them to finish!
-# trust is optional,
-# wait for pair to finish before running connect in expect do a wait 1, on the shell just run one after the other.
+# configure beauty-r1 found under: https://www.amazon.com/gp/product/B08SWC2DQW
+./setup/bluetooth/driver/beauty-r1/bluetooth.sh
+
+# additional devixe ex. https://www.amazon.com/gp/product/B081RLWSTL
+# ./setup/bluetooth/driver/something-something/bluetooth.sh

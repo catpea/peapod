@@ -5,10 +5,11 @@ if command -v isir &> /dev/null; then
   exit;
 fi
 
-echo Installing isir
+echo "Installing iSir"
 npm i -g isir conf
 
-# at this point iSir may require some configuration
+echo "Registering custom iSir commands"
+# Register custom iSir commands
 isir conf command play execute play.sh
 isir conf command stop execute stop.sh
 isir conf command next execute list.sh next

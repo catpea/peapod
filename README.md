@@ -3,6 +3,10 @@ Installation/deployment repository for the Cat Pea music player.
 
 ![Screenshot](screenshot.jpg)
 
+## TODO
+
+- Detect USB Audio and configure ALSA card.
+
 ## TLDR;
 
 Remember to reboot your system after running configuration, Linux requires a reboot after some of the operations in ./setup/ (apt update, etc.)

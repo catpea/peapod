@@ -1,0 +1,13 @@
+[Unit]
+Description=iSir Daemon
+After=bluetooth.target
+
+[Service]
+ExecStart=/usr/bin/isir /dev/input/event1
+Restart=on-failure
+StandardOutput=syslog
+User=peapod
+Group=peapod
+
+[Install]
+WantedBy=multi-user.target

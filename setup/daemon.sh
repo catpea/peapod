@@ -4,6 +4,7 @@ echo daemon setup...
 read -d '' daemon <<_EOF_
 [Unit]
 Description=iSir Daemon
+After=bluetooth.target
 
 [Service]
 ExecStart=/usr/bin/isir /dev/input/event1
@@ -27,3 +28,6 @@ else
 fi;
 
 systemctl status isir-catpea
+
+# notes
+# systemctl list-units --type target

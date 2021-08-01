@@ -19,7 +19,8 @@ if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
       echo 'Already created user peapod.'
     else
       useradd --shell /bin/nologin --groups sudo,input,music --comment "Pea Pod" --create-home --home-dir /home/peapod peapod;
-      usermod -a -G music peapod
+      usermod -a -G music peapod # this allows access to MP3 files
+      usermod -a -G audio peapod # this allows acces to audio devices
       echo 'peapod ALL=(ALL) NOPASSWD: ALL' | sudo tee /etc/sudoers.d/010_peapod-nopasswd
       # NOTE: this user cannot login by standard means, use sudo -u peapod -s
       echo 'Created user peapod'

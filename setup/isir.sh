@@ -8,11 +8,13 @@ fi
 echo "Installing iSir"
 npm i -g isir conf
 
+echo "Configuring iSir"
+isir conf system options commands /home/peapod/peapod/commands
+
 echo "Registering custom iSir commands"
-# Register custom iSir commands
-isir conf command play execute play.sh
-isir conf command stop execute stop.sh
-isir conf command next execute list.sh next
-isir conf command prev execute list.sh prev
-isir conf command loud execute cans.sh loud
-isir conf command soft execute cans.sh soft
+isir conf macro play command play.sh
+isir conf macro stop command stop.sh
+isir conf macro next command list.sh next
+isir conf macro prev command list.sh prev
+isir conf macro loud command cans.sh loud
+isir conf macro soft command cans.sh soft

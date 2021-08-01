@@ -15,6 +15,9 @@
     exit
   fi;
 
+  sudo apt-get update
+  sudo apt-get upgrade
+
   setup;
   date >> .SETUP
   # TODO: rm /etc/sudoers.d/010_peapod-nopasswd

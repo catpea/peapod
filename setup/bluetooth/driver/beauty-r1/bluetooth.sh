@@ -6,7 +6,7 @@ else
   if ! command -v expect &> /dev/null; then
     apt-get -y install expect
   fi
-  ./setup/bluetooth.expect
+  ./setup/bluetooth/driver/beauty-r1/bluetooth.expect
 fi
 
 # Beauty-R1 NOTES

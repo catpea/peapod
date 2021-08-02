@@ -6,6 +6,7 @@ Installation/deployment repository for the Cat Pea music player.
 ## TODO
 
 - Detect USB Audio and configure ALSA card.
+- Keep track of filehandle whern bluetooth goes powersave
 
 ## TLDR;
 

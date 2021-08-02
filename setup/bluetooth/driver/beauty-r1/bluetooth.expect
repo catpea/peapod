@@ -21,5 +21,6 @@ sleep 1
 send "connect $address\r"
 sleep 1
 send_user "\nShould be paired now.\r"
+sleep 3
 send "quit\r"
 expect eof

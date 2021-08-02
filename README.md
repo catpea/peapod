@@ -24,13 +24,13 @@ To do that, login to your device ssh pi@venus and issue the following cURL or Wg
 
 ```sh
 
-sudo sh -c 'curl -o- https://raw.githubusercontent.com/catpea/peapod/main/install.sh | bash'
+curl -o- https://raw.githubusercontent.com/catpea/peapod/main/install.sh | sudo bash
 
 ```
 
 ```sh
 
-sudo sh -c 'wget -qO- https://raw.githubusercontent.com/catpea/peapod/main/install.sh | bash'
+wget -qO- https://raw.githubusercontent.com/catpea/peapod/main/install.sh | sudo bash
 
 ```
 
